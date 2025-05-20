@@ -191,21 +191,21 @@
 @media (min-width: 800px) {
     #logo {
         height: 34vh; 
-        padding: 8vh;
+        padding: 10vh;
     }
   }
 
   @media (min-width: 1200px) {
     #logo {
         height: 34vh; 
-        padding: 6vh;
+        padding: 10vh;
     }
   }
 
   @media (min-width: 1500px) {
     #logo {
         height: 34vh; 
-        padding: 2vh;
+        padding: 10vh;
     }
   }
 
