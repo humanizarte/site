@@ -1,78 +1,210 @@
-body {
-    background-image: url('../img/body.jpg');
-    background-size: cover;       /* Garante que a imagem cubra toda a área */
-    background-position: center;  /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    height: 100vh;                /* Define a altura do body para 100% da viewport */
-    margin: 0; 
-    padding: 0;  
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */ 
- }
-
-
-#t-info{
-    /*background:rgb(215 199 199 / 64%);
-    border: aliceblue 1px solid;
-    border-radius: 15px;
-    */
-    width: 85vw;
-    height: 80vh;
-    display: flex; 
-}
-
-
-#t-logo{
-     height: 100%;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fontes personalizadas */
+  @font-face {
+    font-family: 'Codec';
+    src: url('../fonts/Codec/Codec-Cold-Bold-trial.ttf') format('truetype'),
+         url('../fonts/Codec/Codec-Cold-Heavy-trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/Garamond/AppleGaramond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Codec', sans-serif;
     width: 100%;
-    background-image: url('../img/logo.png');
-    background-size: 60%; /* Largura e altura ajustadas para 50% do tamanho original */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */ 
- }
-#t-dados
-{
-    height: 100%;
-    width: 100%;
-}
-
-button{
-    background: none;
-    border: aliceblue 1px solid;
-    color: aliceblue;
-    border-radius: 15px;
-    padding: 10px;
-}
-
-button:hover{
-    cursor: pointer;
-    background:aliceblue;
-    color: rgb(159, 121, 121);
-}
-
-#t-btn-dados{
+    overflow-x: hidden;
+  }
+  
+  /* Altura total da viewport */
+  .h-100vh {
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+  }
+  
+  /* Seção com imagem de fundo */
+  #session-001 {
+    background-image: url('../img/001.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Logo centralizado */
+  #logo {
+    height: 15vh;
     display: flex;
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+  }
+  
+  #logo img {
+    max-height: 100%;
+    max-width: 90%;
+    height: auto;
+  }
+  
+  /* Nome da empresa */
+  #nome-empresa {
+    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 15%;
-    
-}
- 
-@media only screen and (max-width: 767px) {
-    #t-info {
-        width: 85vw;
-        height: 80vh;
-        display: flex;
-        flex-direction: column;
+    align-items: center;
+    color: rgb(238, 228, 219);
+    text-align: center;
+    padding: 1em;
+  }
+  
+  .OYPEnA {
+    font-size: clamp(24px, 6vw, 64px);
+    font-weight: 700;
+    text-shadow: 4px 4px 2px rgba(133, 73, 38, 0.5);
+  }
+  
+  .OYPEnB {
+    font-size: clamp(16px, 2.5vw, 32px);
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Garamond', sans-serif;
+    text-shadow: 2px 1px 2px rgba(133, 73, 38, 0.9);
+  }
+  
+  /* Menu de navegação */
+  #menu {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 1.5em 1em;
+    margin: 2em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+    max-width: 90%;
+  }
+  
+  #menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  
+  /* Seção de cadastro/botão */
+  #cadastro {
+    display: flex;
+    justify-content: center;
+    padding: 2em 1em;
+  }
+  
+  button {
+    padding: 0.9em 1.5em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: #c9aa90;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background: #b59d8a;
+  }
+  
+  /* Rodapé / Contatos */
+  #contatos-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1.5em;
+    flex-wrap: wrap;
+    min-height: 8vh;
+  }
+  
+  #contatos-menu a {
+    text-align: center;
+  }
+  
+  #contatos-menu img {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Responsividade extra para telas muito pequenas */
+  @media (max-width: 576px) {
+    #logo {
+      height: 12vh;
+      padding-top: 3%;
     }
+  
+    #menu {
+      flex-direction: column;
+      margin: 1em;
+      gap: 0.8em;
+    }
+  
+    .OYPEnA {
+      font-size: clamp(20px, 8vw, 48px);
+    }
+  
+    .OYPEnB {
+      font-size: clamp(14px, 4vw, 24px);
+    }
+  
+    button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
 
-    button { 
-        margin-bottom: 10px;
-        padding: 5px;
+
+  /* Telas Menor que*/
+  @media (max-width: 600px) {
+    #logo {
+       height: 30vh;
+       padding: 8vh;
     }
-}
+  }
+
+
+  /* Telas Maior que*/
+@media (min-width: 600px) {
+    #logo {
+        height: 34vh; 
+        padding: 10vh;
+    }
+  }
+
+ 
+@media (min-width: 800px) {
+    #logo {
+        height: 34vh; 
+        padding: 8vh;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #logo {
+        height: 34vh; 
+        padding: 6vh;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    #logo {
+        height: 34vh; 
+        padding: 2vh;
+    }
+  }
