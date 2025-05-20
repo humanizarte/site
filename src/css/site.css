@@ -36,7 +36,7 @@
   
   /* Seção com imagem de fundo */
   #session-001 {
-    background-image: url('../img/001.webp');
+    background-image: url('../img/background/home.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
