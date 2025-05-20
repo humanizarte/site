@@ -208,3 +208,11 @@
         padding: 2vh;
     }
   }
+
+/* Aplica scroll SOMENTE quando o celular estiver na horizontal (paisagem) */
+@media screen and (orientation: landscape) {
+  #session-001 {
+    max-height: 100vh;
+    overflow-y: auto; /* Scroll vertical */
+  }
+}
