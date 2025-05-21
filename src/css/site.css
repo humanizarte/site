@@ -1,5 +1,5 @@
-:root{
-  --color-text : #654c37;
+:root {
+  --color-text: #654c37;
 }
 
 html {
@@ -8,161 +8,169 @@ html {
 
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  /* Fontes personalizadas */
-  @font-face {
-    font-family: 'Codec';
-    src: url('../fonts/Codec/Codec-Cold-Bold-trial.ttf') format('truetype'),
-         url('../fonts/Codec/Codec-Cold-Heavy-trial.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }  
-  
-  @font-face {
-    font-family: 'Garamond';
-    src: url('../fonts/Garamond/AppleGaramond.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Glacial';
-    src:  url('../fonts/Glacial-Indifference/GlacialIndifference-Regular.otf') format('truetype') ;
-    font-weight: normal;
-    font-style: normal;
-  }  
+/* Fontes personalizadas */
+@font-face {
+  font-family: 'Codec';
+  src: url('../fonts/Codec/Codec-Cold-Bold-trial.ttf') format('truetype'),
+    url('../fonts/Codec/Codec-Cold-Heavy-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  body {
-    font-family: 'Codec', sans-serif;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  
-  /* Altura total da viewport */
-  .h-100vh {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(110, 69, 69, 0.644);
-  }
-  
-  /* Seção com imagem de fundo */
-  #session-001 {
-    background-image: url('../img/background/home.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  /* Logo centralizado */
-  #logo {
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5%;
-  }
-  
-  #logo img {
-    max-height: 100%;
-    max-width: 90%;
-    height: auto;
-  }
-  
-  /* Nome da empresa */
-  #nome-empresa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgb(238, 228, 219);
-    text-align: center;
-    padding: 1em;
-  }
-  
-  .OYPEnA {
-    font-size: clamp(24px, 6vw, 64px);
-    font-weight: 700;
-    text-shadow: 4px 4px 2px rgba(133, 73, 38, 0.5);
-  }
-  
-  .OYPEnB {
-    font-size: clamp(16px, 2.5vw, 32px);
-    font-weight: 400;
-    font-style: italic;
-    font-family: 'Garamond', sans-serif;
-    text-shadow: 2px 1px 2px rgba(133, 73, 38, 0.9);
-  }
-  
-  /* Menu de navegação */
-  #menu {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    padding: 1.5em 1em;
-    margin: 2em auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-    text-align: center;
-    max-width: 90%;
-  }
-  
-  #menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-  }
-  
-  /* Seção de cadastro/botão */
-  #cadastro {
-    display: flex;
-    justify-content: center;
-    padding: 2em 1em;
-  }
-  
-  button {
-    padding: 0.9em 1.5em;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    background: #c9aa90;
-    font-size: 1em;
-  }
-  
-  button:hover {
-    cursor: pointer;
-    background: #b59d8a;
-  }
-  
-  /* Rodapé / Contatos */
-  #contatos-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5em;
-    padding: 1.5em;
-    flex-wrap: wrap;
-    min-height: 8vh;
-  }
-  
-  #contatos-menu a {
-    text-align: center;
-  }
-  
-  #contatos-menu img {
-    height: 40px;
-    width: auto;
-  }
-  
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Garamond';
+  src: url('../fonts/Garamond/AppleGaramond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glacial';
+  src: url('../fonts/Glacial-Indifference/GlacialIndifference-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Codec', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Altura total da viewport */
+.h-100vh {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(110, 69, 69, 0.644);
+}
+
+/* Seção com imagem de fundo */
+#session-001 {
+  background-image: url('../img/background/home.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.back-default {
+  background-image: url('../img/background/home.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Logo centralizado */
+#logo {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+
+#logo img {
+  max-height: 100%;
+  max-width: 90%;
+  height: auto;
+}
+
+/* Nome da empresa */
+#nome-empresa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(238, 228, 219);
+  text-align: center;
+  padding: 1em;
+}
+
+.OYPEnA {
+  font-size: clamp(24px, 6vw, 64px);
+  font-weight: 700;
+  text-shadow: 4px 4px 2px rgba(133, 73, 38, 0.5);
+}
+
+.OYPEnB {
+  font-size: clamp(16px, 2.5vw, 32px);
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Garamond', sans-serif;
+  text-shadow: 2px 1px 2px rgba(133, 73, 38, 0.9);
+}
+
+/* Menu de navegação */
+#menu {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 1.5em 1em;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  text-align: center;
+  max-width: 90%;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* Seção de cadastro/botão */
+#cadastro {
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em;
+}
+
+button {
+  padding: 0.9em 1.5em;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background: #c9aa90;
+  font-size: 1em;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #b59d8a;
+}
+
+/* Rodapé / Contatos */
+#contatos-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1.5em;
+  flex-wrap: wrap;
+  min-height: 8vh;
+}
+
+#contatos-menu a {
+  text-align: center;
+}
+
+#contatos-menu img {
+  height: 40px;
+  width: auto;
+}
+
 
 
 /* Seção com imagem de fundo */
@@ -190,84 +198,149 @@ html {
   /* font-family: 'Garamond', sans-serif; */
   /* font-family: 'Codec', sans-serif; */
   font-family: 'Glacial', sans-serif;
-  /* text-shadow: 2px 1px 2px rgba(133, 73, 38, 0.9); */ 
+  /* text-shadow: 2px 1px 2px rgba(133, 73, 38, 0.9); */
   color: var(--color-text);
-} 
-.glacial-text{
+}
+
+.glacial-text {
   font-family: 'Glacial', sans-serif;
 }
 
-  /* Responsividade extra para telas muito pequenas */
-  @media (max-width: 576px) {
-    #logo {
-      height: 12vh;
-      padding-top: 3%;
-    }
-  
-    #menu {
-      flex-direction: column;
-      margin: 1em;
-      gap: 0.8em;
-    }
-  
-    .OYPEnA {
-      font-size: clamp(20px, 8vw, 48px);
-    }
-  
-    .OYPEnB {
-      font-size: clamp(14px, 4vw, 24px);
-    }
-  
-    button {
-      width: 100%;
-      max-width: 300px;
-    }
+
+#session-003 {
+  display: flex;
+}
+
+#session-003 #s3-fx-1 img {
+  width: 20vw;
+  padding: 10vh;
+}
+
+div#s3-fx-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.s3-h1 { 
+  font-size: clamp(24px, 6vw, 40px);
+  text-shadow: 4px 4px 2px rgba(133, 73, 38, 0.5);
+  color: #eee4db;
+  margin: 5vw;
+  margin-top: 0vw;
+
+}
+
+.s3-card-head img{ 
+    width: 10vw;
+    border-radius: 100%; 
+    margin: 1vw;
+}
+
+div#s3-fx-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; 
+}
+
+.s3-card {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  padding: 1vw;
+  border-radius: 2vw;
+  width: 90%;
+}
+
+.s3-card-head {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.s3-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 1vw;
+}
+
+/* Responsividade extra para telas muito pequenas */
+@media (max-width: 576px) {
+  #logo {
+    height: 12vh;
+    padding-top: 3%;
   }
 
-
-  /* Telas Menor que*/
-  @media (max-width: 600px) {
-    #logo {
-       height: 30vh;
-       padding: 8vh;
-    }
+  #menu {
+    flex-direction: column;
+    margin: 1em;
+    gap: 0.8em;
   }
 
+  .OYPEnA {
+    font-size: clamp(20px, 8vw, 48px);
+  }
 
-  /* Telas Maior que*/
+  .OYPEnB {
+    font-size: clamp(14px, 4vw, 24px);
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* Telas Menor que*/
+@media (max-width: 600px) {
+  #logo {
+    height: 30vh;
+    padding: 8vh;
+  }
+}
+
+
+/* Telas Maior que*/
 @media (min-width: 600px) {
-    #logo {
-        height: 34vh; 
-        padding: 10vh;
-    }
+  #logo {
+    height: 34vh;
+    padding: 10vh;
   }
+}
 
- 
+
 @media (min-width: 800px) {
-    #logo {
-        height: 34vh; 
-        padding: 10vh;
-    }
+  #logo {
+    height: 34vh;
+    padding: 10vh;
   }
+}
 
-  @media (min-width: 1200px) {
-    #logo {
-        height: 34vh; 
-        padding: 10vh;
-    }
+@media (min-width: 1200px) {
+  #logo {
+    height: 34vh;
+    padding: 10vh;
   }
+}
 
-  @media (min-width: 1500px) {
-    #logo {
-        height: 34vh; 
-        padding: 10vh;
-    }
+@media (min-width: 1500px) {
+  #logo {
+    height: 34vh;
+    padding: 10vh;
   }
+}
 
 /* Aplica scroll SOMENTE quando o celular estiver na horizontal (paisagem) */
 @media screen and (orientation: landscape) {
   .session-landscape {
     max-height: 100vh;
-    overflow-y: auto; /* Scroll vertical */
-  } 
+    overflow-y: auto;
+    /* Scroll vertical */
+  }
 }
