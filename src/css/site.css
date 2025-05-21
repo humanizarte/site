@@ -1,10 +1,17 @@
+:root{
+  --color-text : #654c37;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
   /* Fontes personalizadas */
   @font-face {
     font-family: 'Codec';
@@ -13,6 +20,13 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }  
   
   @font-face {
     font-family: 'Garamond';
@@ -21,6 +35,13 @@
     font-style: normal;
   }
   
+  @font-face {
+    font-family: 'Glacial';
+    src:  url('../fonts/Glacial-Indifference/GlacialIndifference-Regular.otf') format('truetype') ;
+    font-weight: normal;
+    font-style: normal;
+  }  
+
   body {
     font-family: 'Codec', sans-serif;
     width: 100%;
@@ -142,6 +163,40 @@
     width: auto;
   }
   
+
+
+/* Seção com imagem de fundo */
+#session-002 {
+  background-image: url('../img/background/session-002.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5vw;
+}
+
+.OYPEnA-002 {
+  font-size: clamp(24px, 6vw, 64px);
+  font-weight: 700;
+  font-family: 'Glacial', sans-serif;
+  /* text-shadow: 4px 4px 2px rgba(133, 73, 38, 0.5); */
+  color: var(--color-text);
+}
+
+.OYPEnB-002 {
+  margin-top: 5vh;
+  font-size: clamp(16px, 2vw, 30px);
+  font-weight: 100;
+  /* font-style: italic; */
+  /* font-family: 'Garamond', sans-serif; */
+  /* font-family: 'Codec', sans-serif; */
+  font-family: 'Glacial', sans-serif;
+  /* text-shadow: 2px 1px 2px rgba(133, 73, 38, 0.9); */ 
+  color: var(--color-text);
+} 
+.glacial-text{
+  font-family: 'Glacial', sans-serif;
+}
+
   /* Responsividade extra para telas muito pequenas */
   @media (max-width: 576px) {
     #logo {
@@ -211,8 +266,8 @@
 
 /* Aplica scroll SOMENTE quando o celular estiver na horizontal (paisagem) */
 @media screen and (orientation: landscape) {
-  #session-001 {
+  .session-landscape {
     max-height: 100vh;
     overflow-y: auto; /* Scroll vertical */
-  }
+  } 
 }
