@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fale Conosco</title>
+  <script>
+    // Altere esse número para o seu WhatsApp (com DDI e DDD, sem espaços ou traços)
+    const whatsappNumber = '5506235490741'; // Ex: 55 + DDD + número
+    const mensagem = encodeURIComponent("Olá! Gostaria de falar com vocês.");
+    const linkWhatsapp = `https://wa.me/${whatsappNumber}?text=${mensagem}`;
+
+    window.onload = function () {
+      // Abre o WhatsApp em uma nova aba
+      window.open(linkWhatsapp, '_blank');
+
+      // Redireciona de volta para a URL base após 3 segundos
+      setTimeout(function () {
+        window.location.href = '/';
+      }, 3000);
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecionando para o WhatsApp... Caso não redirecione, <a href="#" onclick="window.open(linkWhatsapp, '_blank')">clique aqui</a>.</p>
+</body>
+</html>
